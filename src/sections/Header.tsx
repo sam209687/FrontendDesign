@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Activity, AlignRight, Antenna } from "lucide-react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import Button from "@/components/Button";
+import Button from "@/modules/GradientButton";
 
 export const Header = () => {
   const { scrollY } = useScroll();

@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/Button";
+import Button from "@/modules/GradientButton";
 import starsBg from '../assets/stars.png'
 import gridLinesBg from '../assets/grid-lines.png'
 import { motion, useMotionTemplate, useMotionValue, useScroll, useTransform  } from "framer-motion";

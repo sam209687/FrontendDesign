@@ -11,16 +11,19 @@ import ButtonCut from "@/components/ButtonCut";
 import CarouselPage from "@/components/(carousel)/Hero";
 import ProdCards from "@/components/(ProdCards)/Cards";
 import AuraEffect from "@/sections/AuraEffect";
-import HeroCarousel from "@/components/(hero-carousel)/carousel";
+import SliderComponent from "@/components/(hero-carousel)/Slider";
+import FeaturesGrid from "@/sections/FeaturesGrid";
+import HeaderSecond from "@/sections/HeaderSecond";
 
 
 export default function Home() {
   return (
    <div>
-     <Header />
+     {/* <Header /> */}
+     <HeaderSecond/>
      <Hero />
      <AuraEffect />
-     <HeroCarousel />
+     <SliderComponent />
      <LogoTicker />
      <Features />
      <Testimonials />
@@ -30,8 +33,9 @@ export default function Home() {
    <CarouselPage />
    </div>
     <ProdCards />
+    <FeaturesGrid />
      <Footer />
-    
+     
    </div>
   )
     

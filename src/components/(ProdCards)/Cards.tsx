@@ -3,6 +3,7 @@ import React from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import TextButton from "@/modules/TextButton";
 
 const cardData = [
   {
@@ -55,23 +56,23 @@ export default function ProdCards() {
           }}
 
           className="flex flex-none gap-8">
-            {/* {cardData.map(({ image, title, descr, color }) => ( */}
-            {[...cardData, ...cardData].map((cardData) => (
+            {cardData.map(({ image, title, descr, color }) => (
+            // {[...cardData, ...cardData].map((cardData) => (
               <div
                 className="relative z-0 mt-10 p-8 md:p-10 max-w-xs md:max-w-md group"
-                key={cardData.title}
+                key={title}
               >
                 <div className={twMerge("absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transistion duration-300",
-                    cardData.color === 'lime' && 'bg-lime-500',
-                    cardData.color === 'yellow' && 'bg-yellow-500',
-                    cardData.color === 'cyan' && 'bg-cyan-500',
+                    color === 'lime' && 'bg-lime-500',
+                    color === 'yellow' && 'bg-yellow-500',
+                    color === 'cyan' && 'bg-cyan-500',
                     
                 )}></div>
                 {/* glow effect */}
                 <div className={twMerge("absolute size-16 rounded-xl bg-fuchsia-500 group-hover:bg-fuchsia-400 transistion duration-300 top-1.5 right-1.5 -z-10",
-                    cardData.color === 'lime' && 'bg-lime-500 group-hover:bg-lime-400',
-                    cardData.color === 'yellow' && 'bg-yellow-500 group-hover:bg-yellow-400',
-                    cardData.color === 'cyan' && 'bg-cyan-500 group-hover:bg-cyan-400',
+                    color === 'lime' && 'bg-lime-500 group-hover:bg-lime-400',
+                    color === 'yellow' && 'bg-yellow-500 group-hover:bg-yellow-400',
+                    color === 'cyan' && 'bg-cyan-500 group-hover:bg-cyan-400',
                     
                 )}></div>
 
@@ -83,23 +84,16 @@ export default function ProdCards() {
                     {/* image  */}
                     <img
                       className="size-40 group-hover:-translate-y-6 transition duration-300"
-                      src={cardData.image}
+                      src={image}
                       alt="pill"
                     />
                   </div>
                 </div>
 
-                <h3 className="font-black text-3xl mt-12">{cardData.title}</h3>
-                <p className="text-lg text-zinc-400 mt-4">{cardData.descr}</p>
+                <h3 className="font-black text-3xl mt-12">{title}</h3>
+                <p className="text-lg text-zinc-400 mt-4">{descr}</p>
                 <div className="flex justify-between mt-5">
-                  <button className={twMerge("text-sm uppercase font-extrabold tracking-wider text-fuchsia-500",
-                    cardData.color === 'lime' && 'text-lime-500',
-                    cardData.color === 'yellow' && 'text-yellow-500',
-                    cardData.color === 'cyan' && 'text-cyan-500',
-                    
-                  )}>
-                    Learn more
-                  </button>
+                 <TextButton color={color}>Know More</TextButton>
                   <HiOutlineArrowLongRight className="flex text-zinc-500 justify-center size-11 group-hover:text-zinc-300 transistion duration-300 -translate-x-2 group-hover:translate-x-0 cursor-pointer " />
                 </div>
               </div>

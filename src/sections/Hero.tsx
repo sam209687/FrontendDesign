@@ -1,9 +1,8 @@
 "use client";
-import Button from "@/components/Button";
+import Button from "@/modules/GradientButton";
 import starsBg from "../assets/stars.png";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { start } from "repl";
 
 export const Hero = () => {
   const sectionRef = useRef(null);
