@@ -7,13 +7,14 @@ import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
 import SolarTrendsPage from "@/sections/Hero-second";
-import ButtonCut from "@/components/ButtonCut";
 import CarouselPage from "@/components/(carousel)/Hero";
 import ProdCards from "@/components/(ProdCards)/Cards";
 import AuraEffect from "@/sections/AuraEffect";
 import SliderComponent from "@/components/(hero-carousel)/Slider";
 import FeaturesGrid from "@/sections/FeaturesGrid";
 import HeaderSecond from "@/sections/HeaderSecond";
+import LatestPost from "@/sections/LatestPost";
+import ActionsPage from "@/sections/ActionsPage";
 
 
 export default function Home() {
@@ -29,11 +30,13 @@ export default function Home() {
      <Testimonials />
      <CallToAction />
     <SolarTrendsPage/>
-   <div className="min-h-screen bg-zinc-900 overflow-scroll">
+  
    <CarouselPage />
-   </div>
+  
     <ProdCards />
     <FeaturesGrid />
+    <ActionsPage />
+    <LatestPost/>
      <Footer />
      
    </div>

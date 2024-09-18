@@ -1,5 +1,22 @@
-import React, { ComponentPropsWithRef } from 'react'
+import React, { ComponentPropsWithoutRef, ComponentPropsWithRef } from 'react'
 import { twMerge } from 'tailwind-merge';
+
+
+// export default function CutCornerButton( props : ComponentPropsWithoutRef <'div'>) {
+
+//   const { className, children } = props;
+//   return(
+//     <button className={twMerge(' bg-fuchsia-500/20 px-4 py-2 font-extrabold uppercase tracking-wide relative', className)}>
+//       <div className='absolute inset-0 outline outline-2 -outline-offset-2 outline-fuchsia-500 rounded-tr-2xl'></div>
+      
+//       {/* <div className='absolute inset-0 outline outline-2 -outline-offset-2 outline-fuchsia-500'></div> */}
+
+//       {/*  */}
+
+//       <span className="leading-6">Learn More </span>
+//     </button>
+//   )
+// }
 
 export default function CutCornerButton( props : ComponentPropsWithRef <"button"> ) {
     const { className, children } = props;
